@@ -1,0 +1,10 @@
+<h2>HighScore :</h2>
+
+<div ng-controller="highScoreList as HSL">
+
+    <ul>
+        <li ng-repeat="hs in HSL.highScore | orderBy:'-score' | limitTo:10">{{hs.name}} : {{hs.score}}</li>
+    </ul>
+
+    <button ng-click="HSL.resetHighScore()" class="btn btn-danger">Clean</button>
+</div>

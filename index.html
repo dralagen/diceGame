@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="diceGame">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Dice Game</title>
+
+    <link rel="stylesheet" type="text/css" href="vendors/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+
+<br/>
+
+<div ng-view class='container-fluid'></div>
+
+<div class='container-fluid' ng-include="'partials/highScoreList.html'"></div>
+
+<!--<script type="text/javascript" src="vendors/jquery/dist/jquery.min.js"></script>-->
+<script type="text/javascript" src="vendors/angular/angular.min.js"></script>
+<script type="text/javascript" src="vendors/angular-route/angular-route.min.js"></script>
+<!--<script type="text/javascript" src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>-->
+
+<script type="text/javascript" src="app/app.js" ></script>
+<script type="text/javascript" src="app/highScore.js" ></script>
+<script type="text/javascript" src="app/game.js" ></script>
+
+</body>
+</html>

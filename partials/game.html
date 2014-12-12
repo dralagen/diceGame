@@ -1,0 +1,16 @@
+
+<form ng-show="player.turn === 0 || player.turn === 10" class="form-inline">
+    name : <input type="text" ng-model="player.name" class="form-control"/>
+    <button ng-click="player.play()" class="btn btn-primary">Play</button>
+</form>
+
+<div ng-hide="player.turn === 0">
+    {{ player.name }} <br/>
+    score    : {{ player.score }} <br/>
+    turn     : {{ player.turn }} <br/>
+    last jet : {{ player.lastJet || '-' }} <br/>
+    <hr/>
+    <button ng-click="player.play()" ng-hide="player.turn === 10" class="btn btn-primary">Play</button>
+    <span ng-show="player.turn === 10" class="text-danger">Game over</span>
+</div>
+
